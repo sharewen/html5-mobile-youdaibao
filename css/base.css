@@ -1,0 +1,138 @@
+*,::before,::after { margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body { font-size: 14px; color: #333; font-family: "MicroSoft YaHei","sans-serif","Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "Hiragino Sans GB", "Heiti SC",  "WenQuanYi Micro Hei"; }
+ul, ol { list-style: none; }
+a { text-decoration: none; color: #333; }
+a:hover { color: #333; }
+input, textarea { border: none; outline: none; resize: none; -webkit-appearance: none; }
+img { display: block; }
+.f_left { float: left; }
+.f_right { float: right; }
+.clearfix::after, .clearfix::before { display: block; clear: both; height: 0; line-height: 0; content: ""; visibility: hidden; }
+.m_t10 { margin-top: 10px; }
+.m_r10 { margin-right: 10px; }
+.m_b10 { margin-bottom: 10px; }
+.m_l10 { margin-left: 10px; }
+
+/*sticky */
+html,body,#oil_wrap{
+	height: 100%;
+}
+body > #oil_wrap{
+	height: auto;
+	min-height: 100%;
+}
+#oil_main{
+	overflow: auto;
+	padding-bottom: 80px;
+}
+#oil_footer{
+	height: 80px;
+}
+.oil_layout{
+	position: relative;
+	min-width: 300px;
+	max-width: 640px;
+	margin:0 auto;
+}
+.App_con{
+	width: 90%;
+	margin:0 auto;
+	//min-height: 400px;
+}
+/*成功logo*/
+.success_img{
+	width: 124px;
+	height: 124px;
+	margin:30px auto;
+}
+.success_img img{
+	width: 100%;
+	height: 100%;
+}
+/*同意条款*/
+.agreeCheck_box{
+	margin-top: 20px;
+	position: relative;
+	height: 20px;
+	display: inline-block;
+}
+.agreeCheck_box input[type="checkbox"]{
+	position: absolute;
+	left: -9999px;
+}
+.agreeCheck_box input[type="checkbox"] + i{
+	position: absolute;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background: url(images/unchecked.png)no-repeat left center;
+	background-size: 16px 16px;
+	display: inline-block;
+}
+.agreeCheck_box input[type="checkbox"]:checked + i{
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background: url(images/check.png) no-repeat left center;
+	background-size: 16px 16px;
+}
+.agreeCheck_box a.provision{text-decoration: underline;}
+.agreeCheck_box p{
+	padding-left: 25px;
+	opacity: 0.6;
+	font-size: 13px;
+	color: #000000;
+}
+
+/*成功提示语*/
+.success_tips{
+	font-size: 26px;
+	color: #EC6628;
+	letter-spacing: 0;
+	margin-top: 50px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+/*底部按钮*/
+.btn_Bottom{
+	width: 100%;
+	height: 50px;
+	margin:0 auto;
+}
+.btn_Bottom_line{
+	padding-bottom:  10px;
+	border-top: solid 1px #CED5E3;
+	background: #fff;
+}
+.btn_Bottom_line .btnWrap{
+	min-width: 300px;
+	max-width: 640px;
+	margin:0 auto;
+	width: 90%;
+	margin:0 auto;
+	margin-top: 20px;
+
+}
+.btn_Bottom_line .btnWrap .goNext{
+	background: #F5C733;
+	border: 1px solid #F5C733;
+	border-radius: 6px;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	min-width: 80px;
+	outline: none;
+	font-size: 17px;
+	color: #000000;
+}
+.fixedBottom{
+	position: fixed;
+	width: 100%;
+	max-width: 640px;
+	min-width: 300px;
+	min-height: 50px;
+	bottom: 15px;
+	border-top: solid 1px #CED5E3;
+	background: #fff;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/baitiao.css">
+	<title>白条申请</title>
+</head>
+<body>
+<div id="oil_wrap">
+	<div class="oil_layout" id="oil_main">
+		<div class="App_con">
+			<p class="baitiaoshenqing_topic">当前可用白条额度&nbsp;&nbsp;2000000元</p>
+			<section class="baitiaoshenqing_money">
+				 <p class="money_topic">申请金额</p>
+				 <div class="money_ipt_wrap">
+				 		<label>申请金额</label>
+				 		<input type="number" placeholder="请输入（元）">
+				 </div>
+			</section>
+			<section class="chongzhi_wrap">
+				<div class="row">
+					<button class="chongzhi_card z_touch">充值500元</button>
+					<button class="chongzhi_card">充值1000元</button>
+				</div>
+				<div class="row">
+					<button class="chongzhi_card">充值2000元</button>
+					<button class="chongzhi_card">充值5000元</button>
+				</div>
+			</section>
+			<section class="yanzheng_wrap">
+				<p class="topic">验证码</p>
+				<div class="ipt_wrap">
+				  <div class="left_wrap">
+				 		<label>验证码</label>
+				 		<input type="number" placeholder="请输入">
+				 	</div>
+					<div class="getVerifyCode">获取验证码</div>
+				</div>
+			</section>
+			<label class="agreeCheck_box">
+					<input type="checkbox" checked name="agree"/>
+					<i></i>
+					<p>我已阅读并同意<a class="provision" href="#">服务条款</a></p>
+			</label>
+	</div>
+</div>
+	<section id="oil_footer" class="btn_Bottom_line baitiao">
+		<div class="btnWrap">
+			<button type="button" class="goNext">下一步</button>
+		</div>
+	</section>
+
+</div>
+<script>
+	var chongzhiBtn=document.querySelectorAll('.chongzhi_card');
+	for(var i=0;i<chongzhiBtn.length;i++){
+			chongzhiBtn[i].onclick=function(index){
+				return function(){
+						for(var j=0;j<chongzhiBtn.length;j++){
+								removeClass(chongzhiBtn[j],'z_touch');
+						}
+						chongzhiBtn[index].className+=' z_touch';
+				}
+			}(i)
+	}
+	function removeClass(obj,name){
+			var classStr=obj.className;
+			var classArr=classStr.split(" ");
+			var classNewArr=[];
+			for(var i=0;i<classArr.length;i++){
+				if(classArr[i] !=name){
+					classNewArr.push(classArr[i]);
+				}
+			}
+			obj.className=classNewArr.join(" ");
+	}
+
+</script>
+</body>
+</html>
